@@ -23,24 +23,21 @@ a {
 
 .header-links {
     display: flex;
-    
-
-}
+    }
 
 .header-logo{
-
 }
 
 .content1 {
     display:flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #1f2937;
     color: #efe7eb;
     padding-top: 100px;
     padding-bottom: 100px;
     padding-left: 100px;
     padding-right: 50px;
- 
     }
 
 .content1-left {
@@ -49,7 +46,7 @@ a {
     align-items: flex-start;
     flex: 1;
  
-    padding-left: 400px;
+    /*padding-left: 400px;*/
     margin: 0;
 }
 
@@ -70,7 +67,7 @@ a {
     padding-right: 50px;
 }
 
-button {
+.content1 button {
     color: #e5e7eb;
     background-color: #3882f6;
     border: 2px;
@@ -100,9 +97,8 @@ background-color: #f9faf8;
 display: flex;
 flex-direction: column;
 align-items: center;
-
-
-
+height: 500px;
+justify-content: center;
 }
 /*Why can't I control this location?
 
@@ -111,7 +107,6 @@ Set main container to flex and set flex type. Then the items in that container c
 
 .content2-header {
     font-size: 36px;
-    font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,37 +123,31 @@ Set main container to flex and set flex type. Then the items in that container c
     justify-content: center;
     gap: 35px;
     padding-bottom: 75px;
-
-
-
-
-
 }
 
 .placeholder, .info {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .placeholder {
     background-color: white;
     border: 3px solid #3882f6;
     border-radius: 10px;
-    
     width: 150px;
     height: 150px;
 }
 
 .info {
-
     padding: 5px;
    }
 
-.text {
-text-align: center;
-width: 150px;
+   /* I CANNOT TARGET THIS TEXTS FONT WEIGHT!*/
+.content2-text {
+    text-align: center;
+    width: 150px;
+    font-weight: 300;
 }
 /*-----------------------------------*/
 
@@ -168,8 +157,9 @@ width: 150px;
     justify-content: center;
     background-color: #e5e7eb;
     /*Learning moment! instead of adding random padding, set container height then allign to center..duh!*/
-    height: 375px;
-
+    height: 300px;
+    /*changing this to flex 1 stopped my text from escaping the container*/
+    flex: 1;
 }
 
 .content3-main-text {
@@ -179,13 +169,87 @@ width: 150px;
     font-size: 36px;
     font-style: italic;
     font-weight: 100;
-    padding-left: 300px;
-    padding-right: 300px;
-
+    padding-left: 200px;
+    padding-right: 200px;
+    
+    flex-wrap: nowrap;
+    height: 350px;
 }
 
 .content3-bold-text {
     display: flex;
     justify-content: flex-end;
     padding-right: 300px;
+    padding-bottom: 100px;
+}
+
+/*----------------------------------------------------*/
+.content4 {
+display: flex;
+flex-direction: column;
+background-color: white;
+height: 375px;
+/*adding justify center controlled content-4 positioning*/
+justify-content: center;
+}
+
+.content4-container {
+    background-color: #3882f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 6px;
+    
+   
+
+
+}
+
+.content4-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 25px 50px;
+    margin: 0px;
+    color: #e5e7eb;
+    flex: 1;
+}
+
+.content4-text p {
+    margin: 0;
+    color: #e5e7eb;
+}
+
+/*ALSO CANNOT TARGET THIS....*/
+.content4-container-text-bold strong{
+    font-weight: 1000;
+}
+
+.content4 button {
+    display: flex;
+    flex-direction: row;
+    background-color: #3882f6;
+    color: #e5e7eb;
+    border: solid 3px white;
+    border-radius: 4px;
+    padding: 4px 20px;
+    margin-right: 100px;
+    }
+
+    /**************************************/
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #efe7eb;
+        background-color: #1f2937;
+        font-size: 18px;
+        height: 50px;
+        margin: 0px;
+        
+        
+  
 }
